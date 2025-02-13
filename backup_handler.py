@@ -18,7 +18,7 @@ def run_backup(folder_path):
     upload_to_s3(encrypted_file, BUCKET_NAME)
     print("✅ Backup Process Completed")
 
-schedule.every(20).seconds.do(run_backup, "C:\Z-Projects\XYZ")
+schedule.every(10).seconds.do(run_backup, "C:\Z-Projects\XYZ")
 
 while True:
     schedule.run_pending()
